@@ -1,0 +1,34 @@
+$padding: 10px 15px;
+$border-radius: 20px;
+$blue-grey: #9bb8cd;
+$caramel: #eec759;
+$blue: #3081d0;
+$pinky: #ff6969;
+$soft-blood: #ff6969;
+
+button {
+  border-radius: $border-radius;
+  padding: $padding;
+  cursor: pointer;
+  border: 0;
+  font-size: medium;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.my-blue-gray { background-color: $blue-grey; }
+.my-blue { background-color: $blue; }
+.my-caramel { background-color: $caramel; }
+.my-pinky { background-color: $pinky; }
+.my-soft-blood { background-color: $soft-blood; }
+
+@mixin margin($property, $value) {
+  #{$property}: $value;
+}
+
+@for $i from 1 through 25 {
+  .mt-#{$i} { @include margin(margin-top, $i * 2px); }
+  .mb-#{$i} { @include margin(margin-bottom, $i * 2px); }
+  .ml-#{$i} { @include margin(margin-left, $i * 2px); }
+  .mr-#{$i} { @include margin(margin-right, $i * 2px); }
+}

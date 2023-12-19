@@ -1,10 +1,5 @@
-$global-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$blue: #3081d0;
-$blue-grey: #9bb8cd;
 $reset-margin: 0px;
-$pinky: #ff90bc;
-$soft-blood: #ff6969;
-
+$global-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 h1,
 h2,
 h3,
@@ -13,29 +8,23 @@ p {
   margin: $reset-margin;
 }
 
-.text-center {
-  text-align: center;
+h2 {
+  color: #b1c381;
+  margin: 5px 0px 5px 0px;
 }
+.card {
+  padding: 25px;
+  background-color: #fff7d4;
+  border-radius: 20px;
+  margin: 13px 0px 13px 0px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 
-.my-bolder {
-  font-weight: bolder;
-}
-
-
-.text-blue {
-  color: $blue;
-}
-
-.text-blue-gray {
-  color: $blue-grey;
-}
-
-.text-pinky {
-  color: $pinky;
-}
-
-.text-soft-blood {
-  color: $soft-blood;
+  .text-sm {
+    font-size: small;
+  }
+  .my-bolder {
+    font-weight: bolder;
+  }
 }
 
 @mixin margin($property, $value) {
@@ -46,15 +35,12 @@ p {
   .mt-#{$i} {
     @include margin(margin-top, $i * 2px);
   }
-
   .mb-#{$i} {
     @include margin(margin-bottom, $i * 2px);
   }
-
   .ml-#{$i} {
     @include margin(margin-left, $i * 2px);
   }
-
   .mr-#{$i} {
     @include margin(margin-right, $i * 2px);
   }

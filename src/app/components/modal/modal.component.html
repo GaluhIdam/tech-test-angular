@@ -1,0 +1,21 @@
+<!-- modal.component.html -->
+<div class="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>{{title}}</h2>
+      <button (click)="close()">X</button>
+    </div>
+    <div class="modal-body">
+      <label for="title">Your Activity</label>
+      <input type="text" [(ngModel)]="activityTitle">
+      <label for="description">Description Activity</label>
+      <textarea type="text" rows="5" [(ngModel)]="activityDescription"></textarea>
+      <label for="title">Day</label>
+      <input type="date" [(ngModel)]="activityDay">
+      <label for="description">Clock</label>
+      <input type="time" [(ngModel)]="activityClock">
+
+      <app-button text="Submit" styleClass="my-caramel mb-5" (onClick)="submitActivity()"></app-button>
+    </div>
+  </div>
+</div>

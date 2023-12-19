@@ -1,0 +1,81 @@
+$global-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$reset-margin: 0px;
+$blue: #3081d0;
+$caramel: #eec759;
+$input-border-color: #ddd;
+
+h1,
+h2,
+h3,
+p,
+label {
+  font-family: $global-font-family;
+  margin: $reset-margin;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 20px;
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: $blue;
+      margin: 0;
+      font-size: large;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
+
+  .modal-body {
+    margin-top: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: $caramel;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid $input-border-color;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: $blue;
+        box-shadow: 0 0 5px $blue;
+      }
+    }
+  }
+}
